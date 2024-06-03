@@ -21,13 +21,11 @@ public final class ShowHitbox extends JavaPlugin implements Listener{
 
     @Override
     public void onDisable() {
-        // Plugin shutdown logic
         getLogger().info("showHitbox plugin has been disabled");
     }
 
     @EventHandler
     public void onEntitySpawn(EntitySpawnEvent event) {
-        // ゾンビがスポーンしたときの処理
         if (event.getEntityType() == EntityType.ZOMBIE) {
             LivingEntity zombie = (LivingEntity) event.getEntity();
             Location zombieLocation = zombie.getLocation();
@@ -37,9 +35,7 @@ public final class ShowHitbox extends JavaPlugin implements Listener{
 
     private void displayHitbox(Location location) {
         World world = location.getWorld();
-        // ヒットボックスを表示するためのブロックを設定
         Material blockType = Material.GLASS;
-        // ヒットボックスの大きさを設定
         int hitboxSize = 2;
 
         for (int x = -hitboxSize; x <= hitboxSize; x++) {
