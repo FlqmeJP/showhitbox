@@ -1,0 +1,4 @@
+name: showHitbox
+version: '${project.version}'
+main: com.example.showhitbox.ShowHitbox
+api-version: '1.20'
